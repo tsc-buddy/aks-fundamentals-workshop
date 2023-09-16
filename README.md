@@ -40,3 +40,10 @@ Ensure you are in the correct directory, deploy the bicep code. Update the --nam
 ```text
     az deployment group create --resource-group <YOUR-RG-NAME> --template-file main.bicep --parameters main.bicepparam --name <YOUR-NAME>
 ```
+From here, we are going to explore some of the following.
+
+- The resources in your specified resource group. 
+- The resource group all the nodes reside in.
+- Back on the kubernetes resource - explore some components we have discussed today.
+
+You will hit RBAC issues at this point. It is by design and something we will talk through in the next session.
