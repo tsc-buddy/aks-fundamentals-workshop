@@ -28,7 +28,6 @@ Confirm and/or set the correct context
 ```text
     az account show / az account set <subscription>
 ```
-
 Create a resource group to deploy into
 ```text
     az group create -n aks-workshop -l 
@@ -37,8 +36,7 @@ Edit the main.bicepparam file, line 5, provide your name or initials
 ```text
     param dnsPrefix = 'aks-<YOURNAME>'
 ```
-
-Ensure you are in the correct directory, deploy the bicep code
+Ensure you are in the correct directory, deploy the bicep code. Update the --name value.
 ```text
-    az deployment group create --resource-group <YOUR-RG-NAME> --template-file main.bicep --parameters main.bicepparam --name aks-deploy
+    az deployment group create --resource-group <YOUR-RG-NAME> --template-file main.bicep --parameters main.bicepparam --name <YOUR-NAME>
 ```
