@@ -30,7 +30,7 @@ Confirm and/or set the correct context
 ```
 Create a resource group to deploy into
 ```text
-    az group create -n aks-workshop -l 
+    az group create -n aks-workshop -l <YOURREGION>
 ```
 Edit the main.bicepparam file, line 5, provide your name or initials
 ```text
