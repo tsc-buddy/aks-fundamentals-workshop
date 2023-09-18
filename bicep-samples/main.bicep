@@ -43,6 +43,7 @@ resource aks 'Microsoft.ContainerService/managedClusters@2023-07-02-preview' = {
     type: 'SystemAssigned'
   }
   properties: {
+    kubernetesVersion: '1.25.11'
     aadProfile: {
       managed: true
       enableAzureRBAC: true
