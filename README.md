@@ -12,6 +12,7 @@ Ensure you have the following installed.
 - Azure CLI / Azure Powershell
 - Bicep Tools
 - Kubectl
+- Cloned this repo!
 
 <br>
 
