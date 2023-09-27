@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: taint-demo-lab06
+spec:
+  replicas: 300
+  selector:
+    matchLabels:
+      app: demo
+  template:
+    metadata:
+      labels:
+        app: demo
+    spec:
+      affinity:  # Add the node affinity rules here
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: node-role.kubernetes.io/system
+                operator: DoesNotExist
+      containers:
+        - name: nginx
+          image: nginx:latest
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: cordon-service-demo
+spec:
+  selector:
+    app: demo
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80

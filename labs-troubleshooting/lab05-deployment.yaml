@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cordon-app-lab05
+spec:
+  replicas: 300
+  selector:
+    matchLabels:
+      app: demo
+  template:
+    metadata:
+      labels:
+        app: demo
+    spec:
+      containers:
+        - name: nginx
+          image: nginx:latest
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: cordon-service-demo
+spec:
+  selector:
+    app: demo
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80

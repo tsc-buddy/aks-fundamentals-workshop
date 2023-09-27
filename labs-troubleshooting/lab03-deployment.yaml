@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-app-lab03
+spec:
+  selector:
+    matchLabels:
+      app: incorrect-app
+  template:
+    metadata:
+      labels:
+        app: nginx 
+    spec:
+      containers:
+        - name: nginx
+          image: nginx:latest
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: frontend-service
+spec:
+  selector:
+    app: myApp
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
