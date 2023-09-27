@@ -2,7 +2,7 @@
 
 ## Lab One: Pod Issues
 
-You have recently done a release of a new ingress controller, NGINX, and nothing is coming online. Investigate the issues and discuss where the problems are. This lab is to be done solely through the Azure UI and kubectl.
+You have recently done a release of a new ingress controller, NGINX, and nothing is coming online. Investigate the issues and discuss where the problems are. This lab is to be done solely through the Azure UI or kubectl.
 
 - 1: Run the lab01-deployment.yaml
 - 2: Inspect the status and begin troubleshooting.
