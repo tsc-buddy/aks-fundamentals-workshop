@@ -1,7 +1,7 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: automation-processor
+  name: automation-processor-lab04
 spec:
   template:
     spec:

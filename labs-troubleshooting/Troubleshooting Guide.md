@@ -9,7 +9,6 @@ You have recently done a release of a new ingress controller, NGINX, and nothing
 - 3: Make the appropriate changes to your deployment yaml
 - 4: Validate them by deploying and checking status
 
-
 ## Lab Two: Compute Resource issues
 
 You have fixed the issue from lab one, but now someone has introduced another problem, causing the pod to not be ready.
